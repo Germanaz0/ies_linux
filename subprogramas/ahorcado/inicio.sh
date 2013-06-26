@@ -57,19 +57,19 @@ while true; do
 	#recorremos si acerto una letra de la palabra
 	acerto_letra=false
 	for (( i=0; i<${CANTIDAD_LETRAS}; i++ )); do
+		skey=$(($i + 1))
   		letra_sistema=${PALABRA:$i:1}
   		if [ "$letra_sistema" == "$letra_usuario" ]; then
-  			FRASE_A_COMPLETAR=$(echo $FRASE_A_COMPLETAR | sed s/./$letra_sistema/$i)
+  			#Reemplazamos el caracter encontrado en la frase a completar que tiene guiones
+  			FRASE_A_COMPLETAR=$(echo $FRASE_A_COMPLETAR | sed s/./$letra_sistema/$skey)
   			CANTIDAD_ACIERTOS=$(($CANTIDAD_ACIERTOS + 1))
   			acerto_letra=true
   		fi
 	done
 
-	echo $FRASE_A_COMPLETAR
-
 	#mostramos si ganamos y salimos del juego
-	if [ $CANTIDAD_ACIERTOS -eq $LONGITUD_LETRAS ]; then
-		echo "GANAMOS !"
+	if [ $CANTIDAD_ACIERTOS -eq $CANTIDAD_LETRAS ]; then
+		echo "GANAMOS LA FRASE ES: $FRASE_A_COMPLETAR"
 		exit
 	fi
 

@@ -1,4 +1,4 @@
-Saludo:Hola
-Pista 1:Resultado1
-Pista 2:Resultado2
-Que animal ladra:Perro
+Animal Acuatico:foca
+Insecto:araña
+Animal que ladra:perro
+Color:rojo
