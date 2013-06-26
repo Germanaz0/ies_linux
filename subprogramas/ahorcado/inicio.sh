@@ -38,14 +38,15 @@ while true; do
 
 	#mostramos informacion del juego
 	echo "Pista: $PISTA"
+
+	echo '*****'
+	echo "FRASE: $FRASE_A_COMPLETAR"
+	echo '*****'
+	echo ''
 	echo "Cantidad de letras: $CANTIDAD_LETRAS"
 	echo "Cantidad de Aciertos: $CANTIDAD_ACIERTOS"
 	echo "Intenos Restantes: $NUMERO_INTENTOS"
 
-	echo ''
-	echo '*****'
-	echo "FRASE: $FRASE_A_COMPLETAR"
-	echo '*****'
 	#leemos la letra que ingresa el usuario
 	echo ''
 	echo "Escriba una letra y luego presione enter: "
