@@ -29,16 +29,17 @@ do
 		resul5=$(($N6 - $resul4))
 		echo "Ingrese la suma de el 7 y el 8 dígito:     "
 		read N7
-		resul6 = $(($N7 - $resul5))
+		resul6=$(($N7 - $resul5))
 		echo "Ingrese la suma de el 8 y el 9 dígito:     "
 		read N8
-		resul7 = $(($N8 - $resul6))
+		resul7=$(($N8 - $resul6))
 		echo "Tu número es: 15$resul1 $resul2 $resul3 $resul4 $resul5 $resul6 $resul7 "
 	fi
 
-	echo "Presione una tecla para continuar ..."
-	echo tecla
+	echo "Pulse una tecla para jugar otra vez ..."
+	read tecla
 	
+
 done
 
 
