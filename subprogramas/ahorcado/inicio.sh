@@ -29,7 +29,7 @@ fi
 #inciamos la palabra a mostrar con guiones bajos
 FRASE_A_COMPLETAR='_'
 for (( i=0; i<${LONGITUD_LETRAS}; i++ )); do
-  	FRASE_A_COMPLETAR=$FRASE_A_COMPLETAR'_'
+	FRASE_A_COMPLETAR=$FRASE_A_COMPLETAR'_'
 done
 
 #iniciamos el programa
@@ -58,14 +58,14 @@ while true; do
 	acerto_letra=false
 	for (( i=0; i<${CANTIDAD_LETRAS}; i++ )); do
 		skey=$(($i + 1))
-  		letra_sistema=${PALABRA:$i:1}
-  		if [ "$letra_sistema" == "$letra_usuario" ]; then
+		letra_sistema=${PALABRA:$i:1}
+		if [ "$letra_sistema" == "$letra_usuario" ]; then
   			#Reemplazamos el caracter encontrado en la frase a completar que tiene guiones
   			FRASE_A_COMPLETAR=$(echo $FRASE_A_COMPLETAR | sed s/./$letra_sistema/$skey)
   			CANTIDAD_ACIERTOS=$(($CANTIDAD_ACIERTOS + 1))
   			acerto_letra=true
   		fi
-	done
+  	done
 
 	#mostramos si ganamos y salimos del juego
 	if [ $CANTIDAD_ACIERTOS -eq $CANTIDAD_LETRAS ]; then
