@@ -13,9 +13,9 @@ while true
 		read opc
 		case $opc in 
 			#Ejecutamos los subprogramas
-			1) sh ./subprogramas/detectar_archivo.sh;;
-			2) sh ./subprogramas/adivinar_numero.sh;;
-			3) sh ./subprogramas/ahorcado/inicio.sh;;
+			1) bash ./subprogramas/detectar_archivo.sh;;
+			2) bash ./subprogramas/adivinar_numero.sh;;
+			3) bash ./subprogramas/ahorcado/inicio.sh;;
 			#Salimos o mostramos mensaje de error
 			0) exit;;
 			*) echo "Opcion erronea";;
