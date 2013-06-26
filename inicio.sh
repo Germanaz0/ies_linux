@@ -7,7 +7,8 @@ while true
 		echo -n "Menu Principal
 			1) Detectar archivo
 			2) Adivinar Numero
-			3) Ahorcado
+			3) Adivinar Celular
+			4) Ahorcado
 			0) Terminar
 			Ingrese su opcion: "
 		read opc
@@ -15,7 +16,8 @@ while true
 			#Ejecutamos los subprogramas
 			1) bash ./subprogramas/detectar_archivo.sh;;
 			2) bash ./subprogramas/adivinar_numero.sh;;
-			3) bash ./subprogramas/ahorcado/inicio.sh;;
+			3) bash ./subprogramas/adivinar_celular.sh;;
+			4) bash ./subprogramas/ahorcado/inicio.sh;;
 			#Salimos o mostramos mensaje de error
 			0) exit;;
 			*) echo "Opcion erronea";;
