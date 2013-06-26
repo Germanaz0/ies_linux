@@ -22,7 +22,7 @@ LONGITUD_LETRAS=$(($CANTIDAD_LETRAS - 1))
 
 if [ $CANTIDAD_LETRAS -eq 0 ]
 	then
-	echo "No existe !";
+	echo "No existe una palabra en el diccionario !";
 	exit;
 fi
 
@@ -42,10 +42,14 @@ while true; do
 	echo "Cantidad de Aciertos: $CANTIDAD_ACIERTOS"
 	echo "Intenos Restantes: $NUMERO_INTENTOS"
 
-	echo $FRASE_A_COMPLETAR
-
+	echo ''
+	echo '*****'
+	echo "FRASE: $FRASE_A_COMPLETAR"
+	echo '*****'
 	#leemos la letra que ingresa el usuario
-	echo "Escriba una letra y luego presione enter"
+	echo ''
+	echo "Escriba una letra y luego presione enter: "
+	
 	read letra_usuario
 
 	#validamos si el usuario inserto un guion bajo
@@ -69,12 +73,14 @@ while true; do
 
 	#mostramos si ganamos y salimos del juego
 	if [ $CANTIDAD_ACIERTOS -eq $CANTIDAD_LETRAS ]; then
+		clear
 		echo "GANAMOS LA FRASE ES: $FRASE_A_COMPLETAR"
 		exit
 	fi
 
 	#salimos del juego si perdimos
 	if [ $NUMERO_INTENTOS -eq 0 ]; then
+		clear
 		echo "Perdimos !"
 		exit
 	fi
