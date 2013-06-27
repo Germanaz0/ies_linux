@@ -10,6 +10,7 @@ while true
 			3) Adivinar Celular
 			4) Ahorcado
 			5) Trivia
+			6) Masa corporal
 			0) Terminar
 			Ingrese su opcion: "
 		read opc
@@ -20,6 +21,7 @@ while true
 			3) bash ./subprogramas/adivinar_celular.sh;;
 			4) bash ./subprogramas/ahorcado/inicio.sh;;
 			5) bash ./subprogramas/trivia.sh;;
+			6) bash ./subprogramas/masa_corporal.sh;;
 			#Salimos o mostramos mensaje de error
 			0) exit;;
 			*) echo "Opcion erronea";;
